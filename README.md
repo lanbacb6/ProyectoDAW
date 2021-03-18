@@ -17,7 +17,7 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
  
 - **¿Qué va a hacer la aplicación?**
 
- Gestionar las diferentes tareas para la administracion de la empresa.
+    Gestionar las diferentes tareas para la administracion de la empresa.
 	
 - **¿Cuál es su atractivo principal?** 
 Se podrá acceder en cualquier parte ya que es una aplicación web.
