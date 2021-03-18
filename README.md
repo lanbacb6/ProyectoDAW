@@ -20,10 +20,12 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
     Gestionar las diferentes tareas para la administracion de la empresa.
 	
 - **¿Cuál es su atractivo principal?** 
-Se podrá acceder en cualquier parte ya que es una aplicación web.
+
+    Se podrá acceder en cualquier parte ya que es una aplicación web.
 
 - **¿Qué problema concreto va a resolver?** 
-Gestionara Proveedores, clientes, albaranes, facturas, trabajadores que tendra la empresa.
+
+    Gestionara Proveedores, clientes, albaranes, facturas, trabajadores que tendra la empresa.
 
 - **¿Qué necesidad va a cubrir?**
 
