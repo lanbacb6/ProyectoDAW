@@ -16,6 +16,7 @@ Esta aplicación consiste en administrar una empresa de carpintería de Hierros 
 Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con conexión a internet sin necesidad de instalar ningún Software.
  
 - **¿Qué va a hacer la aplicación?**
+
  Gestionar las diferentes tareas para la administracion de la empresa.
 	
 - **¿Cuál es su atractivo principal?** 
