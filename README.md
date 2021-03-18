@@ -1,1 +1,43 @@
-# ProyectoDAW
+# Proyecto DAW
+
+#### Curso Escolar 2020-2021
+#### Autor: [Juan María] https://github.com/lanbacb6
+#### Tutor: [José María] https://github.com/chemaduran
+#### Fecha de Inicio: 17-03-2021
+#### Fecha de Finalización: DD-MM-YYYY
+
+## Breve descripción del proyecto
+
+Mi proyecto consiste en administrar una empresa de carpintería de Hierros y Aluminios, su función es realizar las diferentes tareas para la administración de dicha empresa Ejemplos (Proveedores, clientes, albaranes, facturas, trabajadores...).
+
+## Definir el objetivo de la aplicación
+Esta aplicación consiste en administrar una empresa de carpintería de Hierros y Aluminios que se desarrola mediante una aplicación web que su funcion realizaras las diferentes tareas para la administración de dicha empresa.
+
+Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con conexión a internet sin necesidad de instalar ningún Software.
+ 
+- **¿Qué va a hacer la aplicación?**
+ Gestionar las diferentes tareas para la administracion de la empresa.
+	
+- **¿Cuál es su atractivo principal?** 
+Se podrá acceder en cualquier parte ya que es una aplicación web.
+
+- **¿Qué problema concreto va a resolver?** 
+Gestionara Proveedores, clientes, albaranes, facturas, trabajadores que tendra la empresa.
+
+- **¿Qué necesidad va a cubrir?**
+
+## Prototipo de la Interfaz del proyecto
+
+En este apartado el alumno insertará la documentación del prototipo del proyecto (sketch, wireframe, mockup y un prototipo HTML y CSS)  que permite al cliente previsualizar el resultado final del producto que se está desarrollando.
+
+....
+....
+....
+
+## Estructura del Proyecto
+
+En este apartado el alumno explicará el contenido del repositorio y de todas las carpetas relevantes del mismo.
+
+## Demostración del proyecto
+
+Vídeo demostrativo que contenga una pequeña demostración de la apariencia del proyecto y de aquello que el proyecto puede hacer. (No más de 2 minutos).
