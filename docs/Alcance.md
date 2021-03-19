@@ -1,20 +1,37 @@
 ### Introducción
-Esta aplicación pretende gestionar los datos de colaboradores, beneficiarios y talleres que organiza una asociación. Será una herramienta útil para conocer la demanda de los beneficiaros y la disponibilidad de colaboradores que puedan atender esa demanda.
+consiste en administrar una empresa de carpintería de Hierros y Aluminios, su función es realizar las diferentes tareas para la administración de dicha empresa Ejemplos (Proveedores, clientes, albaranes, facturas, trabajadores).
 
 ### Alcance del proyectos
 # Tareas que mi proyecto llevará a cabo:
-- Permite logarse a los beneficiarios y consultar los talleres disponibles, plazas, horarios, etc.
-- Los beneficiarios podrán solicitar la matriculación en alguno de los talleres.
-- Los colaboradores podrán logarse y cambiar sus características, nuevas habilidades, modificar su disponibilidad, etc
-- Remitirá correo electrónico a los beneficiarios con los datos de la reserva que han hecho.
-- Se podrán sacar listas de los alumnos de cada taller.
-- Se podrá sacar un listado de los colaboradores que pueden impartir un taller en un horario determinado.
-- Añadir nuevos talleres, modificar los existentes.
-- Imprimirá diplomas con los datos de los alumnos.
-- Permitirá enviar correos masivos con ofertas de nuevos talleres.
-- Permitirá que los alumnos valoren cada uno de los talleres.
-* Se habilitará un blog para que los usuarios puedan realizar comentarios.
-- Se generará una memoria anual de todos los talleres realizados.
-- Permitirá establecer los recursos necesarios para cada taller
-- Controlará la preferencia de asignación de talleres en función del número de veces que ya ha disfrutado del servicio.
-- .....
+- Permitira acceder los usuarios que esten dados de alta en la aplicacion web.
+- Permitirar poder registrarse para acceder a la aplicacion.
+- Tendremos tres tipos cpanel (Root, Administración y trabajador).
+- Panel de Root
+	1. Modificar usuario.
+		1.1 Nombre.
+		1.2 Apellidos.
+		1.3 Rol.
+	2. Eliminar usuario.
+	3. Listados de todos los usuarios que estan dado de alta el la aplicación web.
+	3. Validar peticiones de vacaciones o asunto propios de los trabajadores.
+	
+- Panel de Administracion.
+
+	1. Modificar o crear clientes.
+	2. Listados de clientes.
+	3. Modificar o crear Proveedores.
+	4. Listados de proveedores.
+	5. Modificar o crear Facturas.
+	6. Listado de facturas.
+	7. Modificar o crear Albaranes.
+	8. Listado de albaranes.
+	
+
+- Panel del trabajador.
+
+	1. Introducir Fecha y hora de entra y salida.
+	2. Introducir una incidencia.
+	3. Pedir vacaciones.
+	4. Ver estado de las peticiones.
+
+...
