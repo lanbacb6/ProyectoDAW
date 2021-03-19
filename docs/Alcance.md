@@ -7,7 +7,7 @@ consiste en administrar una empresa de carpintería de Hierros y Aluminios, su f
 - Permitirar poder registrarse para acceder a la aplicacion.
 - Tendremos tres tipos cpanel (Root, Administración y trabajador).
 - Panel de Root
-	1. Modificar usuario.		
+	-. Modificar usuario.		
 	2. Eliminar usuario.
 	3. Listados de todos los usuarios que estan dado de alta el la aplicación web.
 	3. Validar peticiones de vacaciones o asunto propios de los trabajadores.
