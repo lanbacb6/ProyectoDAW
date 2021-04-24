@@ -15,4 +15,20 @@ public class MainController {
 	public String home() {
 		return "index";
 	}
+	
+	@GetMapping("/rootArea")
+	public String rootArea(){
+		return "rootArea";
+	}
+	
+	@GetMapping("/administracionArea")
+	public String administracionArea() {
+		return "administracionArea";
+	}
+	
+	@GetMapping("/trabajadorArea")
+	public String trabajadorArea() {
+		return "trabajadorArea";
+	}
+	
 }

@@ -12,18 +12,16 @@
 </head>
 <body>
 
-	<div class="container">		 
+	<div class="container">
 
 		<h1>Bienvenidos al Menu Principal</h1>
-		
-		Usuario: <span sec:authentication="principal.username">User</span>
-		<br>
+
+		Usuario: <span sec:authentication="principal.username">User</span> <br>
 		<br>
 
 		<div class="row">
 			<div class="col-md-4 col-sm-3">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(187, 120, 36, 0.1)">
 							<center>
@@ -32,16 +30,13 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Area Root
-								<div class="pull-right badge"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/rootArea}">Area Root</a>
 							</h4>
-						</div>
-					</a>
+						</div>				
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(22, 160, 133, 0.1)">
 							<center>
@@ -51,16 +46,14 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Area Administracion
-								<div class="pull-right badge" id="WrControls"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}">Area Administración</a>
 							</h4>
-						</div>
-					</a>
+						</div>				
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(130, 93, 9, 0.1)">
 							<center>
@@ -70,16 +63,14 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Area Trabajador
-								<div class="pull-right badge" id="WrThemesIcons"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea}">Area Trabajador</a>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
 				<div class="wrimagecard wrimagecard-topimage">
-					
+
 					<div class="wrimagecard-topimage_header"
 						style="background-color: rgba(130, 93, 9, 0.1)">
 						<center>
@@ -90,7 +81,7 @@
 					<div class="wrimagecard-topimage_title">
 						<h4>
 							<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Cerrar
-						sesion</a>
+								sesion</a>
 							<div class="pull-right badge" id="WrThemesIcons"></div>
 						</h4>
 					</div>

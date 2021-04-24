@@ -50,7 +50,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 						"/login",
 						"/registration",
 						"/js/**",
-						"/Imagenes/**").permitAll()				
+						"/Imagenes/**").permitAll()	
+				.antMatchers("/rootArea/**").hasAnyAuthority("ROLE_ROOT")
+				.antMatchers("/administracionArea/**").hasAnyAuthority("ROLE_ADMINISTRACION")
+				.antMatchers("/trabajadorArea/**").hasAnyAuthority("ROLE_TRABAJADOR")
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()

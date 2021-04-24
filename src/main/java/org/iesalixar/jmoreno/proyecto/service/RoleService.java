@@ -1,6 +1,6 @@
 package org.iesalixar.jmoreno.proyecto.service;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.iesalixar.jmoreno.proyecto.model.Role;
 import org.iesalixar.jmoreno.proyecto.repository.RoleRepository;
@@ -21,5 +21,10 @@ public class RoleService {
 	public Role getRol(long id){
 		
 		return roleRepository.findById(id);
+	}
+	
+	public List<Role> findAll(){
+		
+		return roleRepository.findAll();
 	}
 }
