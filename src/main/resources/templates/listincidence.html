@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de Incidencia</title>
+</head>
+<body>
+<div class="cabecera">
+	<h1>Listado de Incidencia</h1>
+</div>
+
+
+<div class="container">
+		
+		
+		<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea}"><img src="/Imagenes/AreaTrabajador/atras.png" width="4%" height="4%" align="right"></a>
+		
+		<table class="table table-responsive table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Fecha</th>
+					<th>Descripcion</th>
+					<th>Estado</th>								
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="incidence : ${listincidence}"					
+					th:alt-title="${incidenceStat.even}? 'even' : 'odd'">
+					<td th:text="${incidence.id}" name="id"></td>
+					<td th:text="${incidence.fecha}" name="fecha"></td>
+					<td th:text="${incidence.descripcion}" name="descripcion"></td>	
+					<td th:text="${incidence.estado}" name="estado"></td>					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

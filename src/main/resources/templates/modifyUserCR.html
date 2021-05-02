@@ -7,9 +7,15 @@
 <title>Modificar usuario</title>
 </head>
 <body>
+<div class="cabecera">
+	<h1>Modificar usuario</h1>
+</div>
 
-	<div class="container">
-		<h1>Modificar usuario</h1>
+
+<div class="container">		
+		
+		<a sec:authorize="isAuthenticated()" th:href="@{/rootArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
 
 		<form method="post" enctype="multipart/form-data" action="#"
 			th:action="@{/rootArea/modifyucr/submit}" th:object="${user}">

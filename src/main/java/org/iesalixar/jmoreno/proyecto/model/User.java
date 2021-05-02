@@ -1,6 +1,7 @@
 package org.iesalixar.jmoreno.proyecto.model;
 
 import java.util.Collection;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
@@ -41,6 +43,9 @@ public class User {
 			inverseJoinColumns = @JoinColumn(
 					name = "role_id", referencedColumnName = "id"))
 	private Collection<Role> roles;
+	
+	 @OneToMany(mappedBy="users")
+	 private Set<Incidence> incidences;
 
 	public User(){
 		
@@ -102,6 +107,17 @@ public class User {
 	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
 	}
+
+	public Set<Incidence> getIncidences() {
+		return incidences;
+	}
+
+	public void setIncidences(Set<Incidence> incidences) {
+		this.incidences = incidences;
+	}
+	
+	
+	
 	
 	
 }

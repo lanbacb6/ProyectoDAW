@@ -13,14 +13,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Root Area</title>
 </head>
-
 <body>
+	
+	<div class="cabecera">	
+	    <h1>Bienvenidos al Panel de control (Root)</h1>
+	 </div>	
 
 	<div class="container">
 
-		<h1>Bienvenidos al Panel de control (Root)</h1>
-		<br>
-		<br>
+		
+		<br><br>
 
 		<div class="row">
 			<div class="col-md-3 col-sm-4">
@@ -43,8 +45,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(22, 160, 133, 0.1)">
 							<center>
@@ -54,11 +55,11 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Incidencias
-								<div class="pull-right badge" id="WrControls"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/rootArea/listincidenceroot}">Listado de Incidencias</a>
+								<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
 						</div>
-					</a>
+					
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
@@ -72,8 +73,9 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-							<a sec:authorize="isAuthenticated()" th:href="@{/rootArea/listusecrol}">Listado de Usuarios</a>
-							<div class="pull-right badge" id="WrThemesIcons"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/rootArea/listusecrol}">Listado de Usuarios</a>
+								<div class="pull-right badge" id="WrThemesIcons"></div>
+							</h4>
 						</div>				
 				</div>
 			</div>
@@ -153,6 +155,11 @@
 			</div>
 		</div>
 	</div>
+	
+	<div class="footer">
+    	<p>© Aplicación realizado Juan María <strong>GitHub</strong> lanbacb6</p>
+    </div>
+	
 </body>
 
 </html>

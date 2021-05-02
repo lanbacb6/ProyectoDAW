@@ -8,8 +8,15 @@
 </head>
 <body>
 
-	<div class="container">
-		<h1>Usuarios Pedientes de ROL</h1>
+<div class="cabecera">
+	<h1>Listado de usuarios Pedientes</h1>
+</div>
+
+
+<div class="container">		
+		
+		<a sec:authorize="isAuthenticated()" th:href="@{/rootArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
 		<table class="table table-hover">
 			<thead>
 				<tr>				

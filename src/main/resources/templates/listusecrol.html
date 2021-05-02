@@ -7,8 +7,15 @@
 <title>Listado de usuarios con rol asignado</title>
 </head>
 <body>
-<div class="container">
-		<h1>Usuarios con ROL asignado</h1>
+<div class="cabecera">
+	<h1>Listado de usuarios con rol asignado</h1>
+</div>
+
+
+<div class="container">		
+		
+		<a sec:authorize="isAuthenticated()" th:href="@{/rootArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
 		<table class="table table-responsive table-hover">
 			<thead>
 				<tr>

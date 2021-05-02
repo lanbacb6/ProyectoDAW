@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Editar Incidencia</title>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<div class="cabecera">
+	<h1>Editar Incidencia</h1>
+</div>
+
+
+<div class="container">		
+		
+		<a sec:authorize="isAuthenticated()" th:href="@{/rootArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
+			<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/rootArea/modifyincidence/submit}" th:object="${incidence}">
+			
+			<div class="form-group">
+				<input type="hidden" class="form-control" id="id" name="id" th:value="${incidence.id}" />
+			</div>	
+			
+			
+			<div class="form-group">
+				<label for="nombre">Fecha</label> 
+				<input type="text" class="form-control" id="fecha" name="fecha" th:value="${incidence.fecha}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="apellidos">Descripcion</label>
+				<input type="text" class="form-control" id="descripcion" name="descripcion" th:value="${incidence.descripcion}"/>
+			</div>
+						
+			<div class="form-group">
+				<label for="apellidos">Estado</label>
+				<select class="form-select" id="estado" name="estado">
+					  <option th:value="'Pediente'">Pendiente</option>
+					  <option th:value="'Resuelta'" >Resuelta</option>					  
+				</select>			
+			</div>
+						
+			<br>			
+			<button type="submit" class="btn btn-primary">Editar Incidencia</button>
+			
+		</form>
+		
+	</div>
+	
+
+</body>
+</html>
