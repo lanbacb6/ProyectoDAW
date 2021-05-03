@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de Peticiones</title>
+</head>
+<body>
+	<div class="cabecera">
+		<h1>Listado de Peticiones</h1>
+	</div>
+	
+	<div class="container">
+	
+			<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea}"><img src="/Imagenes/AreaTrabajador/atras.png" width="4%" height="4%" align="right"></a>
+			
+			<table class="table table-responsive table-hover">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Fecha Inicio</th>
+							<th>Fecha Fin</th>
+							<th>Descripcion</th>							
+							<th>Estado</th>								
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="requests : ${listrequests}"					
+							th:alt-title="${requestsStat.even}? 'even' : 'odd'">
+							<td th:text="${requests.id}" name="id"></td>
+							<td th:text="${requests.fechaInicio}" name="fechaInicio"></td>
+							<td th:text="${requests.fechaFin}" name="fechaFin"></td>
+							<td th:text="${requests.descripcion}" name="descripcion"></td>							
+							<td th:text="${requests.estado}" name="estado"></td>					
+						</tr>		
+					</tbody>
+			</table>	
+	</div>
+	
+	
+</body>
+</html>

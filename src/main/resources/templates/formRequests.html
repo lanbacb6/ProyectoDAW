@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Nueva Peticion</title>
+<script defer src="/js/bootstrap.bundle.min.js"></script>
+<script defer src="/js/jquery.min.js"></script>
+<script defer src="/js/sweetalert2@10.js"></script>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">	
+<body>
+
+	<div class="cabecera">
+		<h1>Nueva Peticion</h1>
+	</div>
+	
+	<div class="container">
+	
+		<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea}"><img src="/Imagenes/AreaTrabajador/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
+		
+		<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/trabajadorArea/requestsnew/submit}"
+			th:object="${requests}">
+		
+		
+			<div class="form-group">
+				<label for="title">Fecha Inicio</label>					 
+				<input type="date" class="form-control" id="fechaInicio" name="fechaInicio"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="title">Fecha Fin</label>					 
+				<input type="date" class="form-control" id="fechaFin" name="fechaFin"/>
+			</div>			
+			
+			<div class="form-group">
+				<label for="title">Descripcion</label>
+				<input type="text" class="form-control" id="descripcion" name="descripcion"/>
+			</div>	
+			
+			<label for="user">Trabajador</label>	
+				<select class="form-select" id="users" name="users" th:field="*{users.id}">
+					<option th:each="users:${users}"
+						th:value="${users.id}" th:text="${users.nombre}"></option>					
+				</select>
+			
+				<br><br>
+			<button type="submit" class="btn btn-primary">Crear Petición</button>	
+		
+		</form>
+	
+	
+	</div>
+
+</body>
+</html>

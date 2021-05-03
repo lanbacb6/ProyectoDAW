@@ -44,8 +44,11 @@ public class User {
 					name = "role_id", referencedColumnName = "id"))
 	private Collection<Role> roles;
 	
-	 @OneToMany(mappedBy="users")
-	 private Set<Incidence> incidences;
+	@OneToMany(mappedBy="users")
+	private Set<Incidence> incidences;
+	
+	@OneToMany(mappedBy = "users")
+	private Set<Requests> requests;
 
 	public User(){
 		

@@ -23,22 +23,37 @@
 
 		<div class="row">
 			<div class="col-md-4 col-sm-3">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(187, 120, 36, 0.1)">
 							<center>
 								<img src="../Imagenes/AreaTrabajador/VacacionesAsuntos.png"
 									width="20%" height="20%">
 							</center>
+						</div>						
+						<div class="wrimagecard-topimage_title">
+							<h4>
+							<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea/requestsnew}">Peticion vacaciones o asunto propios</a>
+							<div class="pull-right badge" id="WrThemesIcons"></div>
+						</div>
+					
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="wrimagecard wrimagecard-topimage">					
+						<div class="wrimagecard-topimage_header"
+							style="background-color: rgba(250, 188, 9, 0.1)">
+							<center>
+								<img src="../Imagenes/AreaTrabajador/list.png" width="20%"
+									height="20%">
+							</center>
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Peticion vacaciones o asunto propios
-								<div class="pull-right badge"></div>
+							<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea/listrequests}">Listado de peticiones</a>
+							<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-4">
@@ -54,7 +69,7 @@
 							<h4>
 							<a sec:authorize="isAuthenticated()" th:href="@{/trabajadorArea/incidencenew}">Crear Incidencias</a>
 							<div class="pull-right badge" id="WrThemesIcons"></div>
-						</h4>
+							</h4>
 						</div>					
 				</div>
 			</div>
