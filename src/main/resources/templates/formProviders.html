@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Nuevo Proveedores</title>
+<script defer src="/js/bootstrap.bundle.min.js"></script>
+<script defer src="/js/jquery.min.js"></script>
+<script defer src="/js/sweetalert2@10.js"></script>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">	
+<body>
+
+	<div class="cabecera">
+		<h1>Nuevo Proveedor</h1>
+	</div>
+	
+	<div class="container">
+	
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaAdministracion/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
+		
+		<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/administracionArea/providersnew/submit}"
+			th:object="${providers}">	
+			
+			<div class="form-group">
+				<label for="title">CIF</label>					 
+				<input type="text" class="form-control" id="cif" name="cif"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="title">Nombre</label>					 
+				<input type="text" class="form-control" id="nombre" name="nombre"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="title">Direccion</label>					 
+				<input type="text" class="form-control" id="direccion" name="direccion"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="title">Provincia</label>					 
+				<input type="text" class="form-control" id="provincia" name="provincia"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="title">Código Postal</label>					 
+				<input type="number" class="form-control" id="codigoPostal" name="codigoPostal"/>
+			</div>	
+			
+			<div class="form-group">
+				<label for="title">Telefono</label>					 
+				<input type="number" class="form-control" id="telefono" name="telefono"/>
+			</div>		
+			
+			<br>	
+			
+			<button type="submit" class="btn btn-primary">Crear Proveedor</button>
+			
+		</form>
+		
+	</div>
+
+</body>
+</html>

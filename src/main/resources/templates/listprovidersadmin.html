@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de proveedores</title>
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Listado de proveedores</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
+		<table class="table table-responsive table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Cif</th>
+					<th>Nombre</th>
+					<th>Direccion</th>
+					<th>Provincia</th>
+					<th>Código Postal</th>
+					<th>Teléfono</th>
+					<th>Editar</th>
+					<th>Eliminar</th>				
+				</tr>			
+			</thead>
+			<tbody>
+				<tr th:each="providers : ${listprovidersadmin}"					
+					th:alt-title="${providersStat.even}? 'even' : 'odd'">
+					<td th:text="${providers.id}" name="id"></td>
+					<td th:text="${providers.cif}" name="cif"></td>
+					<td th:text="${providers.nombre}" name="nombre"></td>
+					<td th:text="${providers.direccion}" name="direccion"></td>	
+					<td th:text="${providers.provincia}" name="provincia"></td>
+					<td th:text="${providers.CodigoPostal}" name="CodigoPostal"></td>
+					<td th:text="${providers.telefono}" name="telefono"></td>
+					<td><a class="btn btn-primary"th:href="@{'/administracionArea/providersmodifyAdmin/' + ${providers.id}}">Editar</a></td>
+					<td><a class="btn btn-danger" th:href="@{'/administracionArea/providersdeleteAdmin/' + ${providers.id}}">Eliminar</a></td>							
+				</tr>
+			
+			
+			</tbody>			
+		</table>
+	
+	
+	</div>
+
+</body>
+</html>

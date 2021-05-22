@@ -9,7 +9,7 @@
 <body>
 
 	<div class="cabecera">
-		<h1>Listado de Incidencia</h1>
+		<h1>Listado de Peticiones</h1>
 	</div>
 	
 	<div class="container">
@@ -23,6 +23,7 @@
 						<th>Fecha Inicio</th>
 						<th>Fecha Fin</th>
 						<th>Descripcion</th>
+						<th>Trabajador</th>
 						<th>Estado</th>
 						<th>Editar</th>								
 					</tr>
@@ -34,6 +35,10 @@
 					<td th:text="${requests.fechaInicio}" name="fechaInicio"></td>
 					<td th:text="${requests.fechaFin}" name="fechaFin"></td>
 					<td th:text="${requests.descripcion}" name="descripcion"></td>
+					<td>
+						<p th:each="user : ${requests.users}">
+						<span th:text="${user.nombre}"></span>
+					</td>
 					<td th:text="${requests.estado}" name="estado"></td>					
 					<td><a class="btn btn-primary" th:href="@{'/rootArea/requestsmodify/' + ${requests.id}}">Editar</a></td>
 				</tr>			

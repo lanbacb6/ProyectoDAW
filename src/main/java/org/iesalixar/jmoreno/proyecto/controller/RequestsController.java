@@ -34,10 +34,10 @@ public class RequestsController {
 		Optional<Requests> requests =  requestsService.getId(id);
 		model.addAttribute("requests", requests.get());
 		
-		return "modifyRequest";
+		return "modifyRequestRoot";
 	}
 	
-	@PostMapping("/rootArea/requestsmodify/submit")
+	@PostMapping("/rootArea/requestsmodifyRoot/submit")
 	public String modifyRequests(@ModelAttribute Requests requestsm) {
 		
 		requestsService.modifyRequests(requestsm);

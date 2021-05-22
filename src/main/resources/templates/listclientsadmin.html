@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de Clientes</title>
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Listado de Cliente</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+	
+	<table class="table table-responsive table-hover">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Apellidos</th>
+					<th>Direccion</th>
+					<th>Telefono</th>
+					<th>Editar</th>
+					<th>Eliminar</th>									
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="clients : ${listclientsadmin}"					
+					th:alt-title="${clientsStat.even}? 'even' : 'odd'">
+					<td th:text="${clients.id}" name="id"></td>
+					<td th:text="${clients.nombre}" name="nombre"></td>
+					<td th:text="${clients.apellidos}" name="apellidos"></td>
+					<td th:text="${clients.direccion}" name="direccion"></td>
+					<td th:text="${clients.telefono}" name="telefono"></td>
+					<td><a class="btn btn-primary" th:href="@{'/administracionArea/clientsmodifyAdmin/' + ${clients.id}}">Editar</a></td>
+					<td><a class="btn btn-danger" th:href="@{'/administracionArea/clientsdeleteAdmin/' + ${clients.id}}">Eliminar</a></td>
+				</tr>			
+			</tbody>	
+		</table>
+	
+	
+	</div>
+
+</body>
+</html>

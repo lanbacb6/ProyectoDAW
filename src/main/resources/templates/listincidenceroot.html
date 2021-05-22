@@ -23,6 +23,7 @@
 					<th>ID</th>
 					<th>Fecha</th>
 					<th>Descripcion</th>
+					<th>Trabajador</th>
 					<th>Estado</th>
 					<th>Editar</th>								
 				</tr>
@@ -32,7 +33,11 @@
 					th:alt-title="${incidenceStat.even}? 'even' : 'odd'">
 					<td th:text="${incidence.id}" name="id"></td>
 					<td th:text="${incidence.fecha}" name="fecha"></td>
-					<td th:text="${incidence.descripcion}" name="descripcion"></td>	
+					<td th:text="${incidence.descripcion}" name="descripcion"></td>
+					<td>
+						<p th:each="user : ${incidence.users}">
+						<span th:text="${user.nombre}"></span>
+					</td>		
 					<td th:text="${incidence.estado}" name="estado"></td>
 				<td><a class="btn btn-primary" th:href="@{'/rootArea/incidencemodify/' + ${incidence.id}}">Editar</a></td>
 										

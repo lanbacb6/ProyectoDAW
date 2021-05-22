@@ -35,7 +35,7 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Crear Factura
+								Guardar Factura
 								<div class="pull-right badge"></div>
 							</h4>
 						</div>
@@ -73,7 +73,7 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Crear Albarán
+								Guardar Albarán
 								<div class="pull-right badge" id="WrForms"></div>
 							</h4>
 						</div>
@@ -111,7 +111,7 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Realizar Pedido
+								Guardar Pedido
 								<div class="pull-right badge" id="WrInformation"></div>
 							</h4>
 						</div>
@@ -139,8 +139,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(130, 93, 9, 0.1)">
 							<center>
@@ -150,16 +149,14 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Crear clientes
+								<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea/clientsnew}">Guardar Cliente</a>
 								<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(213, 15, 37, 0.1)">
 							<center>
@@ -169,16 +166,14 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Listado clientes
-								<div class="pull-right badge" id="WrForms"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea/listclientsadmin}">Listado Clientes</a>
+								<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(22, 160, 133, 0.1)">
 							<center>
@@ -188,16 +183,14 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Crear proveedor
-								<div class="pull-right badge" id="WrControls"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea/providersnew}">Guardar Proveedor</a>
+								<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">
-				<div class="wrimagecard wrimagecard-topimage">
-					<a href="#">
+				<div class="wrimagecard wrimagecard-topimage">					
 						<div class="wrimagecard-topimage_header"
 							style="background-color: rgba(51, 105, 232, 0.1)">
 							<center>
@@ -207,11 +200,10 @@
 						</div>
 						<div class="wrimagecard-topimage_title">
 							<h4>
-								Lista de proveedores
-								<div class="pull-right badge" id="WrGridSystem"></div>
+								<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea/listprovidersadmin}">Listado Proveedores</a>
+								<div class="pull-right badge" id="WrThemesIcons"></div>
 							</h4>
-						</div>
-					</a>
+						</div>					
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-4">

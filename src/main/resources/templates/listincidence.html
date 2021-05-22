@@ -23,6 +23,7 @@
 					<th>ID</th>
 					<th>Fecha</th>
 					<th>Descripcion</th>
+					<th>Trabajador</th>
 					<th>Estado</th>								
 				</tr>
 			</thead>
@@ -32,6 +33,10 @@
 					<td th:text="${incidence.id}" name="id"></td>
 					<td th:text="${incidence.fecha}" name="fecha"></td>
 					<td th:text="${incidence.descripcion}" name="descripcion"></td>	
+					<td>
+						<p th:each="user : ${incidence.users}">
+						<span th:text="${user.nombre}"></span>
+					</td>	
 					<td th:text="${incidence.estado}" name="estado"></td>					
 				</tr>
 			</tbody>

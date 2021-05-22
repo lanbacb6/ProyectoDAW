@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Editar Cliente</title>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="cabecera">
+		<h1>Editar Cliente</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaAdministracion/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
+		
+		<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/administracionArea/clientsmodifyAdmin/submit}" th:object="${clients}">
+			
+			<div class="form-group">
+				<input type="hidden" class="form-control" id="id" name="id" th:value="${clients.id}" />
+			</div>	
+			
+			<div class="form-group">
+				<label for="nombre">Nombre</label> 
+				<input type="text" class="form-control" id="nombre" name="nombre" th:value="${clients.nombre}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="apellidos">Apellidos</label> 
+				<input type="text" class="form-control" id="apellidos" name="apellidos" th:value="${clients.apellidos}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="nombre">Dirección</label> 
+				<input type="text" class="form-control" id="direccion" name="direccion" th:value="${clients.direccion}"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="nombre">Teléfono</label> 
+				<input type="number" class="form-control" id="telefono" name="telefono" th:value="${clients.telefono}"/>
+			</div>
+			
+			<br>			
+			<button type="submit" class="btn btn-primary">Editar Cliente</button>
+		
+		
+		</form>
+
+</body>
+</html>
