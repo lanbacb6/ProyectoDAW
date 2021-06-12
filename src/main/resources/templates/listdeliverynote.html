@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de Albaranes</title>
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Listado de Albaranes</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
+		<table class="table table-responsive table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Fecha</th>
+						<th>Descripción</th>						
+						<th>Editar</th>
+						<th>Eliminar</th>															
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="deliverynote : ${listdeliverynote}"					
+						th:alt-title="${deliverynoteStat.even}? 'even' : 'odd'">
+						<td th:text="${deliverynote.id}" name="id"></td>
+						<td th:text="${deliverynote.fecha}" name="fecha"></td>
+						<td th:text="${deliverynote.descripcion}" name="descripcion"></td>						
+						<td><a class="btn btn-primary"th:href="@{'/administracionArea/deliverynotemodify/' + ${deliverynote.id}}">Editar</a></td>
+						<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este Albáran?');"  th:href="@{'/administracionArea/deliverynotedelete/' + ${deliverynote.id}}">Eliminar</a></td>							
+					</tr>
+				</tbody>
+			</table>
+	</div>
+
+</body>
+</html>

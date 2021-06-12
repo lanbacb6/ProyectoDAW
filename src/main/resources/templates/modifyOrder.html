@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Editar Pedido</title>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="cabecera">
+		<h1>Editar Pedido</h1>
+	</div>
+	
+		<div class="container">
+			<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaAdministracion/atras.png" width="4%" height="4%" align="right"></a>
+			<br><br>
+			
+			<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/administracionArea/ordersmodify/submit}" th:object="${orders}">
+			
+				<div class="form-group">					
+					<input type="hidden" class="form-control" id="id" name="id" th:value="${orders.id}" />
+				</div>	
+				
+				
+				<div class="form-group">
+					<label for="title">Fecha</label>					
+					<input type="date" class="form-control" id="fecha" name="fecha" th:value="${orders.fecha}"/>
+				</div>
+				<br>
+				
+				<div class="form-group">
+					<label for="title">Descripción</label>					
+					<textarea  class="form-control" id="descripcion" name="descripcion" rows="3" th:field="${orders.descripcion}"></textarea>
+				</div>
+				<br>
+				
+				<div class="form-group">
+					<label for="title">Precio</label>
+					<input type="text" class="form-control" id="precio" name="precio" th:value="${orders.precio}">
+				</div>				
+				
+				<br>			
+			<button type="submit" class="btn btn-primary">Editar Pedido</button>
+	
+		</form>
+	</div>
+
+</body>
+</html>

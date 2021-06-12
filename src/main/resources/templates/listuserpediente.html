@@ -34,7 +34,7 @@
 					<td th:text="${user.apellidos}" name="apellidos"></td>
 					<td th:text="${user.email}" name="email"></td>	
 					<td><a class="btn btn-primary" th:href="@{'/rootArea/usersrmodify/' + ${user.id}}">Asignar Rol</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/rootArea/usersrdelete/' + ${user.id}}">Eliminar</a></td>			
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este usuario?');" th:href="@{'/rootArea/usersrdelete/' + ${user.id}}">Eliminar</a></td>			
 				</tr>
 			</tbody>
 		</table>

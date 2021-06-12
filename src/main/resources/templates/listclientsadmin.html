@@ -22,6 +22,7 @@
 					<th>Nombre</th>
 					<th>Apellidos</th>
 					<th>Direccion</th>
+					<th>Código Postal</th>
 					<th>Telefono</th>
 					<th>Editar</th>
 					<th>Eliminar</th>									
@@ -34,9 +35,10 @@
 					<td th:text="${clients.nombre}" name="nombre"></td>
 					<td th:text="${clients.apellidos}" name="apellidos"></td>
 					<td th:text="${clients.direccion}" name="direccion"></td>
+					<td th:text="${clients.codigoPostal}" name="codigoPostal"></td>
 					<td th:text="${clients.telefono}" name="telefono"></td>
 					<td><a class="btn btn-primary" th:href="@{'/administracionArea/clientsmodifyAdmin/' + ${clients.id}}">Editar</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/administracionArea/clientsdeleteAdmin/' + ${clients.id}}">Eliminar</a></td>
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este cliente?');" th:href="@{'/administracionArea/clientsdeleteAdmin/' + ${clients.id}}">Eliminar</a></td>
 				</tr>			
 			</tbody>	
 		</table>

@@ -2,13 +2,13 @@ package org.iesalixar.jmoreno.proyecto.repository;
 
 import java.util.Optional;
 
-import org.iesalixar.jmoreno.proyecto.model.Incidence;
+import org.iesalixar.jmoreno.proyecto.model.Invoices;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IncidenceRepository extends JpaRepository<Incidence, Long>{
+public interface InvoicesRepository extends JpaRepository<Invoices, Long>{
 	
-	Optional<Incidence> findById(Long id);
+	Optional<Invoices> findById(Long id);
 
 }

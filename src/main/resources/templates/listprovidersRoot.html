@@ -40,12 +40,19 @@
 					<td th:text="${providers.CodigoPostal}" name="CodigoPostal"></td>
 					<td th:text="${providers.telefono}" name="telefono"></td>
 					<td><a class="btn btn-primary"th:href="@{'/rootArea/providersmodifyRoot/' + ${providers.id}}">Editar</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/rootArea/providersdeleteRoot/' + ${providers.id}}">Eliminar</a></td>							
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este Proveedor?');" th:href="@{'/rootArea/providersdeleteRoot/' + ${providers.id}}">Eliminar</a></td>							
 				</tr>
 			
 			
 			</tbody>			
 		</table>
+		
+		<a class="nav-link" th:href="@{/rootArea/listprovidersroot/(format=pdf)}"
+			title="Exportar a PDF" target="_blank">
+			
+			<img th:src="@{/Imagenes/AreaRoot/pdf.png}" height="35px">
+		
+		</a>
 	
 	
 	</div>

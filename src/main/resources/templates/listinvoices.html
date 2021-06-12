@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de facturas</title>
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Listado de facturas</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
+		
+		<table class="table table-responsive table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Fecha</th>
+						<th>Descripción</th>
+						<th>Precio</th>
+						<th>Cliente</th>
+						<th>Editar</th>
+						<th>Eliminar</th>															
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="invoices : ${listinvoices}"					
+						th:alt-title="${invoicesStat.even}? 'even' : 'odd'">
+						<td th:text="${invoices.id}" name="id"></td>
+						<td th:text="${invoices.fecha}" name="fecha"></td>
+						<td th:text="${invoices.descripcion}" name="descripcion"></td>
+						<td th:text="${invoices.precio}" name="precio"></td>
+						<td>
+							<p th:each="clients : ${invoices.clients}">
+								<strong>Nombre: </strong><span th:text="${clients.nombre}"></span>
+								<Strong>Apellido: </Strong><span th:text="${clients.apellidos}"></span><br>
+								<Strong>Dirección: </Strong><span th:text="${clients.direccion}"></span>
+								<Strong>Teléfono: </Strong><span th:text="${clients.telefono}"></span>
+						</td>
+						<td><a class="btn btn-primary"th:href="@{'/administracionArea/invoicesmodify/' + ${invoices.id}}">Editar</a></td>
+						<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar esta factura?');" th:href="@{'/administracionArea/invoicesdelete/' + ${invoices.id}}">Eliminar</a></td>							
+					</tr>	
+				</tbody>
+			</table>
+	</div>
+
+</body>
+</html>

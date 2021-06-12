@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<title>Listado de pedidos Proveedor</title>
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Listado de Pedidos Proveedor</h1>
+	</div>
+	
+	<div class="container">
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaRoot/atras.png" width="4%" height="4%" align="right"></a>
+		
+		
+		<table class="table table-responsive table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Fecha</th>
+						<th>Descripción</th>
+						<th>Precio</th>
+						<th>Proveedor</th>
+						<th>Editar</th>
+						<th>Eliminar</th>															
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="orders : ${listorders}"					
+						th:alt-title="${ordersStat.even}? 'even' : 'odd'">
+						<td th:text="${orders.id}" name="id"></td>
+						<td th:text="${orders.fecha}" name="fecha"></td>
+						<td th:text="${orders.descripcion}" name="descripcion"></td>
+						<td th:text="${orders.precio}" name="precio"></td>
+						<td>
+							<p th:each="providers : ${orders.providers}">
+								<strong>CIF: </strong><span th:text="${providers.cif}"></span>
+								<Strong>Nombre: </Strong><span th:text="${providers.nombre}"></span><br>								
+						</td>
+						<td><a class="btn btn-primary" th:href="@{'/administracionArea/ordersmodify/' + ${orders.id}}">Editar</a></td>
+						<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este pedido?');" th:href="@{'/administracionArea/ordersdelete/' + ${orders.id}}">Eliminar</a></td>							
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</body>
+</html>

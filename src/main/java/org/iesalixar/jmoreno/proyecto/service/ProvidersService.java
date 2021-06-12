@@ -47,7 +47,7 @@ public class ProvidersService {
 				pr.setProvincia(providersm.getProvincia());
 				pr.setTelefono(providersm.getTelefono());
 				
-				providersRepository.save(providersm);
+				providersRepository.save(pr);
 			}
 		}
 	}

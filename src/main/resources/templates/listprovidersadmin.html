@@ -40,7 +40,7 @@
 					<td th:text="${providers.CodigoPostal}" name="CodigoPostal"></td>
 					<td th:text="${providers.telefono}" name="telefono"></td>
 					<td><a class="btn btn-primary"th:href="@{'/administracionArea/providersmodifyAdmin/' + ${providers.id}}">Editar</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/administracionArea/providersdeleteAdmin/' + ${providers.id}}">Eliminar</a></td>							
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este proveedor?');"  th:href="@{'/administracionArea/providersdeleteAdmin/' + ${providers.id}}">Eliminar</a></td>							
 				</tr>
 			
 			

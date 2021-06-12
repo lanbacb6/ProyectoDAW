@@ -18,8 +18,9 @@ public class ClientsService {
 	private ClientsService clientsService;
 	
 	public Clients save (Clients c) {
-		clientsRepository.save(c);
-		
+		String nombreCompleto = c.getNombre() + " "+c.getApellidos();
+		c.setNombreCompleto(nombreCompleto);
+		clientsRepository.save(c);		
 		return c;
 	}
 	
@@ -43,7 +44,8 @@ public class ClientsService {
 				cl.setNombre(clm.getNombre());
 				cl.setApellidos(clm.getApellidos());
 				cl.setDireccion(clm.getDireccion());
-				cl.setTelefono(clm.getTelefono());				
+				cl.setTelefono(clm.getTelefono());
+				cl.setNombreCompleto(clm.getNombreCompleto());
 				clientsRepository.save(clm);
 			}
 		}

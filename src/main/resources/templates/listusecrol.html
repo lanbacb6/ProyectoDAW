@@ -38,10 +38,17 @@
 						<span th:text="${role.name}"></span>
 					</td>					
 					<td><a class="btn btn-primary" th:href="@{'/rootArea/usercrmodify/' + ${user.id}}">Editar</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/rootArea/usercrdelete/' + ${user.id}}">Eliminar</a></td>			
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este Usuario?');" th:href="@{'/rootArea/usercrdelete/' + ${user.id}}">Eliminar</a></td>			
 				</tr>
 			</tbody>
 		</table>
+		
+		<a class="nav-link" th:href="@{/rootArea/listusecrol/(format=pdf)}"
+			title="Exportar a PDF" target="_blank">
+			
+			<img th:src="@{/Imagenes/AreaRoot/pdf.png}" height="35px">
+		
+		</a>
 	</div>
 
 </body>

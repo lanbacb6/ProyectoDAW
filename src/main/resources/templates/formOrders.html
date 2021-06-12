@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<title>Nuevo Pedido</title>
+<script defer src="/js/bootstrap.bundle.min.js"></script>
+<script defer src="/js/jquery.min.js"></script>
+<script defer src="/js/sweetalert2@10.js"></script>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">	
+<body>
+
+	<div class="cabecera">
+		<h1>Nuevo Pedido Proveedor</h1>
+	</div>
+	
+	<div class="container">
+	
+		<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaAdministracion/atras.png" width="4%" height="4%" align="right"></a>
+		<br><br>
+		
+			<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/administracionArea/ordersnew/submit}"
+			th:object="${orders}">	
+			
+				<label for="providers">Proveedor</label>	
+				<select class="form-select" id="providers" name="providers" th:field="*{providers.id}">
+					<option th:each="providers:${providers}"
+						th:value="${providers.id}" th:text="${providers.nombre}"></option>					
+				</select>			
+				
+				<div class="form-group">
+					<label for="title">Fecha</label>					 
+					<input type="date" class="form-control" id="fecha" name="fecha"/>
+				</div>
+				
+				<div class="form-group">
+					<label for="title">Descripción</label>
+					<textarea placeholder="Cantidad, producto" class="form-control" id="descripcion" name="descripcion" rows="3" th:value="${orders.descripcion}"></textarea>
+				</div>
+				
+				<div class="form-group">
+					<label for="title">Precio</label>
+					<input type="text" class="form-control" id="precio" name="precio">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-primary">Guardar Pedido</button>	
+			</form>
+			
+		</div>
+		
+
+</body>
+</html>

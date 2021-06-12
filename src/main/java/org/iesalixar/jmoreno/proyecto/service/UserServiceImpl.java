@@ -30,6 +30,9 @@ public class UserServiceImpl implements UserService {
 	private UserServiceImpl userService;
 	
 	@Autowired
+	private NotificationEmailService notificacionEmailService;
+	
+	@Autowired
 	private RoleService roleService;
 
 	@Autowired
@@ -48,6 +51,7 @@ public class UserServiceImpl implements UserService {
 		User user = new User(registrationDto.getNombre(), registrationDto.getApellidos(), registrationDto.getEmail(),
 				passwordEncoder.encode(registrationDto.getPassword()), Arrays.asList(rolRepository.findById(4l)));
 
+		notificacionEmailService.sendEmail("alum.jmariamorenov.2020@iesalixar.org", "Notificación de registro", "Ha habido un registro en la aplicación Web \r Los datos recogidos son lo siguientes: \n Nombre: " + registrationDto.getNombre() + ", Apellidos: "+ registrationDto.getApellidos()+ ", Correo Electrónico: "+ registrationDto.getEmail());
 		return userRepository.save(user);
 	}
 

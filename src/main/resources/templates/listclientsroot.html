@@ -21,7 +21,8 @@
 					<th>Nombre</th>
 					<th>Apellidos</th>
 					<th>Direccion</th>
-					<th>Telefono</th>
+					<th>Código Postal</th>
+					<th>Teléfono</th>
 					<th>Editar</th>
 					<th>Eliminar</th>									
 				</tr>
@@ -33,12 +34,20 @@
 					<td th:text="${clients.nombre}" name="nombre"></td>
 					<td th:text="${clients.apellidos}" name="apellidos"></td>
 					<td th:text="${clients.direccion}" name="direccion"></td>
+					<td th:text="${clients.codigoPostal}" name="codigoPostal"></td>
 					<td th:text="${clients.telefono}" name="telefono"></td>
 					<td><a class="btn btn-primary" th:href="@{'/rootArea/clientsmodifyroot/' + ${clients.id}}">Editar</a></td>
-					<td><a class="btn btn-danger" th:href="@{'/rootArea/clientsdeleteroot/' + ${clients.id}}">Eliminar</a></td>
+					<td><a class="btn btn-danger" onclick="return confirm('¿Seguro que quieres eliminar este cliente?');" th:href="@{'/rootArea/clientsdeleteroot/' + ${clients.id}}">Eliminar</a></td>
 				</tr>			
 			</tbody>	
 		</table>
+		
+		<a class="nav-link" th:href="@{/rootArea/listclientsroot/(format=pdf)}"
+			title="Exportar a PDF" target="_blank">
+			
+			<img th:src="@{/Imagenes/AreaRoot/pdf.png}" height="35px">
+		
+		</a>
 	
 	
 	</div>

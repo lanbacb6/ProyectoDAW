@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Editar Albarán</title>
+<link rel="stylesheet" href="/css/AreaPersonalizado.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="cabecera">
+		<h1>Editar Albarán</h1>
+	</div>
+	
+	<div class="container">
+			<a sec:authorize="isAuthenticated()" th:href="@{/administracionArea}"><img src="/Imagenes/AreaAdministracion/atras.png" width="4%" height="4%" align="right"></a>
+			<br><br>
+			
+			<form method="post" enctype="multipart/form-data" action="#"
+			th:action="@{/administracionArea/deliverynotemodify/submit}" th:object="${deliverynote}">
+			
+			<div class="form-group">					
+				<input type="hidden" class="form-control" id="id" name="id" th:value="${deliverynote.id}" />
+			</div>	
+				
+			
+			<div class="form-group">
+				<label for="title">Fecha</label>					
+				<input type="date" class="form-control" id="fecha" name="fecha" th:value="${deliverynote.fecha}"/>
+			</div>
+			<br>
+			
+			<div class="form-group">
+				<label for="title">Descripción</label>					
+				<textarea  class="form-control" id="descripcion" name="descripcion" rows="3" th:field="${deliverynote.descripcion}"></textarea>
+			</div>
+			<br>			
+							
+			<button type="submit" class="btn btn-primary">Editar Albarán</button>
+			
+		</form>
+	</div>
+
+</body>
+</html>
