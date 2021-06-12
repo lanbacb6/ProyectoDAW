@@ -39,7 +39,8 @@ En este apartado el alumno insertará la documentación del prototipo del proyec
 
 ## Estructura del Proyecto
 
-En este apartado el alumno explicará el contenido del repositorio y de todas las carpetas relevantes del mismo.
+En la carpeta src contendrá el codigo de proyecto completo
+En la carpeta docs contendrá toda la documentación del proyecto
 
 ## Demostración del proyecto
 
