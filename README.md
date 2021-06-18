@@ -11,7 +11,7 @@
 Mi proyecto consiste en administrar una empresa de carpintería de Hierros y Aluminios, su función es realizar las diferentes tareas para la administración de dicha empresa Ejemplos (Proveedores, clientes, albaranes, facturas, trabajadores...).
 
 ## Definir el objetivo de la aplicación
-Esta aplicación consiste en administrar una empresa de carpintería de Hierros y Aluminios que se desarrola mediante una aplicación web que su funcion realizaras las diferentes tareas para la administración de dicha empresa.
+Esta aplicación consiste en administrar una empresa de carpintería de Hierros y Aluminios que se desarrolla mediante una aplicación web que su funcion realizaras las diferentes tareas para la administración de dicha empresa.
 
 Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con conexión a internet sin necesidad de instalar ningún Software.
  
