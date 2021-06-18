@@ -17,7 +17,7 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
  
 - **¿Qué va a hacer la aplicación?**
 
-    Gestionar las diferentes tareas para la administracion de la empresa.
+    Gestionar las diferentes tareas para la administracion de la empresa. 
 	
 - **¿Cuál es su atractivo principal?** 
 
@@ -25,7 +25,7 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
 
 - **¿Qué problema concreto va a resolver?** 
 
-    Gestionara Proveedores, clientes, albaranes, facturas, trabajadores que tendra la empresa.
+    Gestionara Proveedores, clientes, albaranes, facturas, trabajadores, incidencias, peticiones de vacaciones de los trabajadores.
 
 - **¿Qué necesidad va a cubrir?**
 
