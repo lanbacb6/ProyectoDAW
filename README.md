@@ -28,6 +28,7 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
     Gestionara Proveedores, clientes, albaranes, facturas, trabajadores, incidencias, peticiones de vacaciones de los trabajadores.
 
 - **¿Qué necesidad va a cubrir?**
+    Guardar la información importante en la empresa y acceder a dicha información en cualquier parte solo teniendo un dispositivo con conexion ha internet.  
 
 ## Prototipo de la Interfaz del proyecto
 
