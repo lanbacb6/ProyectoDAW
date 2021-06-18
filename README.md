@@ -33,7 +33,9 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
 
 ## Prototipo de la Interfaz del proyecto
 
-![img](http://i.imgur.com/yourfilename.png)
+![img](https://i.postimg.cc/wjSZxRns/area.png)
+
+![img](https://i.postimg.cc/wjSZxRns/area.png)
 
 En este apartado el alumno insertará la documentación del prototipo del proyecto (sketch, wireframe, mockup y un prototipo HTML y CSS)  que permite al cliente previsualizar el resultado final del producto que se está desarrollando.
 
