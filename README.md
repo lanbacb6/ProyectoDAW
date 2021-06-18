@@ -4,7 +4,7 @@
 #### Autor: [Juan María] https://github.com/lanbacb6
 #### Tutor: [José María] https://github.com/chemaduran
 #### Fecha de Inicio: 17-03-2021
-#### Fecha de Finalización: DD-MM-YYYY
+#### Fecha de Finalización: 18-06-2021
 
 ## Breve descripción del proyecto
 
