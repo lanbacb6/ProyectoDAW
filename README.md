@@ -42,7 +42,7 @@ En este apartado el alumno insertará la documentación del prototipo del proyec
 ## Estructura del Proyecto
 
 - En la carpeta src contendrá el codigo de proyecto completo.
-- En la carpeta docs contendrá toda la documentación del proyecto
+- En la carpeta docs se recoge toda la documentación relativa al proyecto
 
 ## Demostración del proyecto
 
