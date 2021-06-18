@@ -33,7 +33,7 @@ Se podrá acceder en cualquier parte ya que solo necesitará un dipositivo con c
 
 ## Prototipo de la Interfaz del proyecto
 
-![img](https://i.postimg.cc/wjSZxRns/area.png)
+![img](https://i.postimg.cc/T1wCJTZ6/Principal.png)
 
 ![img](https://i.postimg.cc/wjSZxRns/area.png)
 
